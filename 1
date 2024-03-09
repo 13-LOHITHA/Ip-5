@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Form Validation</title>
+</head>
+<body>
+  <h2>Form Validation</h2>
+  <form id="myForm">
+    <label for="name">Enter your name:</label><br>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Enter your mail id:</label><br>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="gender">Choose gender:</label><br>
+    <select id="gender" name="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+    </select><br><br>
+
+    <label for="password">Create your password:</label><br>
+    <input type="password" id="password" name="password" required><br><br>
+
+    <label for="confirm_password">Confirm your password:</label><br>
+    <input type="password" id="confirm_password" name="confirm_password" required><br><br>
+
+    <label for="mobile">Enter mobile number:</label><br>
+    <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required><br><br>
+
+    <label for="dob">Choose your date of birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="address">Enter your address:</label><br>
+    <textarea id="address" name="address" required></textarea><br><br>
+
+    <label for="location">Choose your location:</label><br>
+    <select id="location" name="location" required>
+      <option value="">Select</option>
+      <option value="option1">Option 1</option>
+      <option value="option2">Option 2</option>
+    </select><br><br>
+
+    <button type="submit">Submit</button>
+    <button type="button" onclick="clearForm()">Clear</button>
+  </form>
+
+  <script>
+    function clearForm() {
+      document.getElementById("myForm").reset();
+    }
+  </script>
+</body>
+</html>
